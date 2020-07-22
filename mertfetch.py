@@ -8,7 +8,7 @@ from pyfiglet import figlet_format
 print(
     colored(figlet_format('MERTFETCH'), 'green') +
     colored(platform.node(), 'red') + "\n" +
-    "----------------------" + "\n" +
+    len(platform.node())*"-" + "\n" +
       colored("System: ", 'green' ) + platform.platform() + " " + platform.system() +
       colored("\nPython version: ", 'green'), platform.python_version() +
       colored("\nCPU count: ", 'green') + str(psutil.cpu_count(logical=False)) +
