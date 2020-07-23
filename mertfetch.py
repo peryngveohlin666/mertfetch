@@ -12,8 +12,8 @@ print(
       colored("System: ", 'green' ) + platform.platform() + " | " + platform.system() +
       colored("\nPython version: ", 'green'), platform.python_version() +
       colored("\nCPU count: ", 'green') + str(psutil.cpu_count(logical=False)) +
-      colored("\nCPU freq: ", 'green') + str(psutil.cpu_freq()[2]) +
-      colored("\nRAM: ", 'green') + str(psutil.virtual_memory()[0]/1024**2)[:2] + "GB" + colored(" Used (%): ", 'green') + str(psutil.virtual_memory().percent) + 
+      colored("\nCPU freq (max): ", 'green') + str(psutil.cpu_freq()[2]) + colored(" Current: ", 'yellow') + str(psutil.cpu_freq()[0]) +
+      colored("\nRAM: ", 'green') + str(psutil.virtual_memory()[0]/1024**2)[:2] + "GB" + colored(" Used (%): ", 'yellow') + str(psutil.virtual_memory().percent) +
       colored("\nUptime: ", 'green') + str(datetime.now() - datetime.fromtimestamp(psutil.boot_time()))
 )
 
